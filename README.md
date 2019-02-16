@@ -1,0 +1,2 @@
+# NgJsBasicApp
+AngularJs basic application
