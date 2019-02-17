@@ -1,6 +1,28 @@
 <lx-tabs>
   <lx-tab lx-label="Users">
-    <p class="p+">Users</p>
+    <div class="p+">
+      <div class="card top-space" ng-repeat="user in users">
+        <div flex-container="row">
+          <div class="card__img card__img--left" style="height: 160px;">
+            <img src="imgs/avatar.png" />
+          </div>
+          <div flex-item flex-container="column">
+            <div flex-item>
+              <strong class="fs-headline display-block tc-red-900">
+                {{ user.name }}
+              </strong>
+
+              <strong class="fs-subhead tc-black-2 display-block tc-red-900">
+                {{ user.email }}
+              </strong>
+            </div>
+            <div class="card__actions">
+                <a href="#"> see user</a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </lx-tab>
 
   <lx-tab lx-label="Post">
@@ -14,7 +36,7 @@
             {{ post.body }}
           </div>
           <div class="card__actions">
-              <a href="#"> read more</a>
+            <a href="#"> read more</a>
           </div>
         </div>
       </div>
