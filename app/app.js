@@ -13,6 +13,10 @@
       .when("/posts/new", {
         templateUrl: "templates/post_form.html",
         controller: "NewPostController"
+      })
+      .when("/posts/edit/:id", {
+        templateUrl: "templates/post_form.html",
+        controller: "PostController"
       });
   }
 );

@@ -18,10 +18,17 @@ angular
       });
     };
   })
-  .controller("PostController", function($scope, PostResource, $routeParams) {
+  .controller("PostController", function($scope, PostResource, $routeParams,$location) {
     $scope.post = PostResource.get({ id: $routeParams.id });
-  })
-  .controller("NewPostController", function($scope, PostResource) {
+    $scope.title = "Edit Post";
+
+    $scope.savePost = function() {
+      PostResource.update({id: $scope.post.id},{ data: $scope.post }, function(data) {
+        console.log(data);
+      });
+      $location.path("/post/"+$scope.post.id);
+  }})
+  .controller("NewPostController", function($scope, PostResource,$location) {
     $scope.post = {};
     $scope.title = "Create Post";
 
@@ -29,5 +36,6 @@ angular
       PostResource.save({ data: $scope.post }, function(data) {
         console.log(data);
       });
+      $location.path("/");
     };
   });
