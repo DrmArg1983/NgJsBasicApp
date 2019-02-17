@@ -1,9 +1,5 @@
-var app = angular.module("app", ["ngRoute","lumx"]);
-
-app.config([
-  "$routeProvider",
-  "$locationProvider",
-  function($routeProvider, $locationProvider) {
+ angular.module("app", ["lumx","ngRoute","ngResource"])
+.config(function($routeProvider, $locationProvider) {
     $locationProvider.hashPrefix("");
     $routeProvider
       .when("/home", {
@@ -15,4 +11,4 @@ app.config([
         controller: "AboutController"
       });
   }
-]);
+);
