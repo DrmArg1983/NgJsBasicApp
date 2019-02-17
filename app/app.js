@@ -9,6 +9,10 @@
       .when("/post/:id", {
         templateUrl: "templates/post.html",
         controller: "PostController"
+      })
+      .when("/posts/new", {
+        templateUrl: "templates/post_form.html",
+        controller: "NewPostController"
       });
   }
 );
