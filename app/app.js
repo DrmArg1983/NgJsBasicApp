@@ -2,13 +2,13 @@
 .config(function($routeProvider, $locationProvider) {
     $locationProvider.hashPrefix("");
     $routeProvider
-      .when("/home", {
+      .when("/", {
         templateUrl: "templates/home.html",
         controller: "MainController"
       })
-      .when("/about", {
-        templateUrl: "templates/about.html",
-        controller: "AboutController"
+      .when("/post/:id", {
+        templateUrl: "templates/post.html",
+        controller: "PostController"
       });
   }
 );
