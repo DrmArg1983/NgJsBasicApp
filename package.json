@@ -5,7 +5,8 @@
   "dependencies": {
     "angular": "^1.7.7",
     "angular-route": "^1.7.7",
-    "express": "*"
+    "express": "*",
+    "official-lumx": "^1.7.42"
   },
   "scripts": {
     "start": "node server.js"

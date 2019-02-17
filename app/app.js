@@ -1,4 +1,4 @@
-var app = angular.module("app", ["ngRoute"]);
+var app = angular.module("app", ["ngRoute","lumx"]);
 
 app.config([
   "$routeProvider",
@@ -8,13 +8,11 @@ app.config([
     $routeProvider
       .when("/home", {
         templateUrl: "templates/home.html",
-        controller: "HomeController",
-        controllerAs: "homeCtrl"
+        controller: "MainController"
       })
       .when("/about", {
         templateUrl: "templates/about.html",
-        controller: "AboutController",
-        controllerAs: "AboutCtrl"
+        controller: "AboutController"
       });
   }
 ]);

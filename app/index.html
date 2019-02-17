@@ -3,21 +3,51 @@
   <head>
     <meta charset="UTF-8" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
-    <script src="https://code.angularjs.org/1.7.7/angular-route.min.js"></script>
-    <script src="app.js"></script>
-    <script src="controllers.js"></script>
-
-    <!--css-->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="node_modules/official-lumx/dist/lumx.css" />
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+    />
 
     <title>Title of the document -1</title>
   </head>
 
   <body>
-    <a href="#home" class="button">Home</a>
-    <a href="#about" class="button">About</a>
+    <nav>
+      <div
+        class="bgc-blue-900 tc-white"
+        flex-container="row"
+        flex-align="center center"
+      >
+        <div flex-item="4">
+          <h1 class="fs-display-3 display-block">Posts App</h1>
+        </div>
+        <div flex-item="1">
+          <a href="#">Start</a>
+        </div>
+        <div flex-item="1">
+          <a href="#">Create Post</a>
+        </div>
+      </div>
+    </nav>
 
-    <div ng-view=""></div>
+    <div class="divider divider--dark"></div>
+
+    <div flex-container="row" flex-align="center">
+      <div ng-view flex-item="9">
+        Demo :)
+      </div>
+    </div>
+
+    <!-- Before body closing tag -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/velocity-animate/velocity.js"></script>
+    <script src="node_modules/moment/min/moment-with-locales.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.7.7/angular-route.min.js"></script>
+    <script src="node_modules/official-lumx/dist/lumx.js"></script>
+
+    <script src="app.js"></script>
+    <script src="controllers.js"></script>
   </body>
 </html>
